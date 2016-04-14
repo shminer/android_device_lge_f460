@@ -53,7 +53,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/init/init.tiger6_product.rc:root/init.tiger6_product.rc \
     $(LOCAL_PATH)/rootdir/init/init.tiger6.rc:root/init.tiger6.rc \
     $(LOCAL_PATH)/rootdir/init/ueventd.tiger6.rc:root/ueventd.tiger6.rc \
-    $(LOCAL_PATH)/rootdir/sbin/chargerlogo:root/sbin/chargerlogo \
+    $(LOCAL_PATH)/rootdir/sbin/sharpening:root/sbin/sharpening \
     $(LOCAL_PATH)/rootdir/sbin/post-init.sh:root/sbin/post-init.sh
 
 # WiFi cal NVRAM file
@@ -121,6 +121,8 @@ PRODUCT_PACKAGES += \
 # Audio configuration file
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(LOCAL_PATH)/configs/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
+    $(LOCAL_PATH)/configs/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml \
     $(LOCAL_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml 
 
@@ -172,14 +174,14 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxQcelp13Enc \
     libOmxVdec \
-    libOmxVdpp \
     libOmxVenc \
+    libOmxVdecHevc \
     libstagefrighthw \
     libstagefright_omx \
     libqomx_core \
     libqcmediaplayer \
     qcmediaplayer
-    
+
 PRODUCT_BOOT_JARS += qcmediaplayer
 
 # Bluetooth
